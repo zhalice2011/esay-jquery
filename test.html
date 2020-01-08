@@ -19,6 +19,11 @@
 
     <input id="myInput" class="myInputClass" value="test" />
 
+    <div id="myDiv">
+        <span>i am  span</span>
+        <i>i am  i</i>
+    </div>
+
     <script>
         $('#myInput').addClass('border');
 
@@ -27,6 +32,11 @@
         //$('#myInput').addClass('border').width(500); 失败,因为没有实现链式调用
 
         //在jquery.mini.js中扩展仿jquery的find(是查找子dom)以及增强已有的width方法
+
+
+        $('#myInput').addClass('border').width(500);
+
+        $('#myDiv').find('span').addClass('border')
 
     </script>
 </body>
