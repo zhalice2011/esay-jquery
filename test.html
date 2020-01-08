@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="ajax.js"></script>
+    <script src="jquery.mini.js"></script>
+
+    <style>
+        .border{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <input  id="myInput"  class="myInputClass" value="test"/>
+
+    <input id="myInput" class="myInputClass" value="test" />
+
+    <script>
+        $('#myInput').addClass('border');
+
+        $('.myInputClass').width(500);
+        
+        //$('#myInput').addClass('border').width(500); 失败,因为没有实现链式调用
+
+        //在jquery.mini.js中扩展仿jquery的find(是查找子dom)以及增强已有的width方法
+
+    </script>
+</body>
+</html>
