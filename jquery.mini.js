@@ -219,8 +219,11 @@
         },
         width: function () { //设置宽度
             var name = arguments[0];
-            var strName = JSON.stringify(name);
+            if (name === undefined) {
+                return this[0].offsetWidth
+            }
             this.each(function (index, ele) {
+                var strName = JSON.stringify(name);
                 if (-1 != strName.indexOf('px'))
                 {
                     ele.style.width = name;
@@ -229,7 +232,6 @@
                 {
                     ele.style.width = name + 'px';
                 }
-                
             });
         },
         height: function () { //设置高度
